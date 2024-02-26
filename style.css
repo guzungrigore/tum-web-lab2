@@ -1,57 +1,141 @@
-@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Sniglet:wght@400;800&display=swap');
-
-header{
+nav {
     position: fixed;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 96px;
-    width: 90%;
+    width: 120px;
+    height: 100vh;
+    box-sizing: border-box;
+    padding: 64px 24px;
+    display: grid;
+    gap: 18px;
+    align-content: space-between;
+    color: white;
+
+    h1 {
+        writing-mode: tb-rl;
+        transform: rotate(180deg);
+        font-size: 20px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-weight: 500;
+    }
+
+    .menu_wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        height: 160px;
+
+        h2 {
+            font-weight: 300;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #8b8b8b;
+        }
+
+        .menu {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+
+
+            .lines {
+                cursor: pointer;
+
+                hr {
+                    margin: 8px 0 0 0;
+                    height: 3px;
+                    background-color: white;
+                    border: none;
+                    width: 100%;
+
+                    &:nth-of-type(2) {
+                        width: 80%;
+                        text-align: start;
+                    }
+
+                }
+            }
+
+        }
+
+        .menu_items {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            h3 {
+                font-size: 0;
+                visibility: hidden;
+            }
+
+        }
+
+        .menu:hover {
+
+            .lines {
+
+                hr {
+
+                    &:nth-of-type(1) {
+                        text-align: start;
+                        animation: hr1 1s ease-in-out infinite;
+                    }
+
+                    &:nth-of-type(2) {
+                        text-align: start;
+                        animation: hr2 1s ease-in-out infinite;
+                    }
+
+                }
+            }
+
+            .menu_items h3 {
+                color: #8b8b8b;
+                cursor: pointer;
+                font-weight: 300;
+                letter-spacing: 2px;
+                font-size: initial;
+                height: min-content;
+                visibility: visible;
+                transition: font-size 0.4s ease-in-out;
+
+                &:hover {
+                    color: white;
+                }
+
+            }
+        }
+    }
+
+    .social_media {
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+    }
+
 }
-.header_title{
-    position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 32px 40%;
-    width: 20%;
 
-    font-family: "Lobster", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: x-large;
+@keyframes hr1 {
+    0% {
+        width: 100%;
+    }
+
+    50% {
+        width: 80%;
+    }
+    100% {
+        width: 100%;
+    }
 }
 
+@keyframes hr2 {
+    0% {
+        width: 80%;
+    }
 
-.header_links{
-    position: center;
-    display: flex;
-    justify-content: space-between;
-    align-items: end;
-    padding: 32px 20px;
-    width: 20%;
-}
-
-.body_title{
-
-    position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10% 40%;
-    width: 20%;
-
-    font-family: "Lobster", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: xxx-large;
-
-}
-
-.body_image{
-    position: center;
-    display: flex;
-    justify-content: end;
-
+    50% {
+        width: 100%;
+    }
+    100% {
+        width: 80%;
+    }
 }
