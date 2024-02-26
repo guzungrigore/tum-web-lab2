@@ -307,3 +307,32 @@ nav {
     }
 
 }
+
+.gallery_section{
+    margin-left: 120px;
+    padding: 64px 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h2{
+        color: #282832;
+        font-size: 15vw;
+        font-weight: 700;
+        text-align: center;
+        z-index: -1;
+    }
+    .gallery{
+        display: grid;
+        grid-template-columns: min-content min-content;
+        gap: 64px;
+        img{
+            height: 600px;
+            width: auto;
+            &:nth-of-type(2n){
+                margin-top: -64px;
+            }
+        }
+    }
+}
