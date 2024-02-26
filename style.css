@@ -226,3 +226,84 @@ nav {
         }
     }
 }
+
+.about_section {
+    margin-left: 120px;
+    padding: 64px 48px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 96px;
+    align-items: center;
+    justify-items: center;
+
+    .description {
+        .about_wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            height: 60vh;
+
+
+            h3 {
+                font-size: 96px;
+                font-weight: 200;
+                align-self: flex-end;
+                letter-spacing: 2px;
+
+            }
+
+            h2 {
+                font-size: 96px;
+                font-weight: 500;
+                padding-bottom: 150px;
+                align-self: flex-end;
+                letter-spacing: 2px;
+            }
+
+            &:before {
+                content: '';
+                position: absolute;
+                z-index: -1;
+                display: block;
+                height: 500px;
+                width: 500px;
+                background-image: url("images/letter-a.png");
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+        }
+
+        p {
+            line-height: 24px;
+            font-weight: 200;
+            font-size: 20px;
+        }
+    }
+
+    .information {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 96px;
+
+        span {
+            color: #8b8b8b;
+            font-size: 18px;
+            padding-bottom: 12px;
+        }
+
+        h3 {
+
+            font-size: 96px;
+            font-weight: 500
+        }
+
+        p {
+            letter-spacing: 2px;
+            font-weight: 400;
+            font-size: 20px;
+        }
+    }
+
+}
