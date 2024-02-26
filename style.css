@@ -139,3 +139,90 @@ nav {
         width: 80%;
     }
 }
+
+@keyframes hr {
+    0% {
+        width: 70px;
+    }
+
+    50% {
+        width: 30px;
+    }
+    100% {
+        width: 70px;
+    }
+}
+.primary_section {
+    color: white;
+    margin-left: 120px;
+    background-image: url("images/DALL·E_2024_02_26_14_21_11_A_close_up_view_of_a_part_of_a_modern.webp");
+    height: 95vh;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .title_wrapper {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        padding: 180px 0 0 0;
+        width: 50vw;
+        left: 50%;
+        transform: translateX(-20%);
+
+        span {
+            font-size: 32px;
+        }
+
+        h2 {
+            font-weight: 500;
+            font-size: 128px;
+        }
+
+        p {
+            padding-top: 16px;
+            font-weight: 200;
+            font-size: 18px;
+        }
+    }
+
+    .more {
+        cursor: pointer;
+        align-self: end;
+        font-size: 24px;
+        display: flex;
+        padding-top: 48px;
+        color: #1f546f;
+        width: min-content;
+        gap: 8px;
+
+        hr {
+            border: none;
+            background-color: #1f546f;
+            height: 2px;
+            width: 70px;
+            animation: hr 3s ease-in-out infinite;
+        }
+    }
+
+    .images {
+        align-self: end;
+        display: flex;
+        gap: 32px;
+        margin-bottom: 32px;
+
+        img {
+            width: 320px;
+            height: 200px;
+
+            &:last-of-type {
+                width: 200px;
+                object-fit: cover;
+            }
+        }
+    }
+}
