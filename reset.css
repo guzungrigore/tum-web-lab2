@@ -35,6 +35,8 @@ body {
     line-height: 1;
     background-color: #1f1f25;
     font-family: "Kanit", sans-serif;
+    letter-spacing: 1px;
+    color: white;
 }
 
 ol, ul {

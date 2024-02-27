@@ -96,7 +96,6 @@ nav {
                 font-size: initial;
                 height: min-content;
                 visibility: visible;
-                transition: font-size 0.4s ease-in-out;
 
                 &:hover {
                     color: white;
@@ -152,6 +151,7 @@ nav {
         width: 70px;
     }
 }
+
 .primary_section {
     color: white;
     margin-left: 120px;
@@ -227,6 +227,42 @@ nav {
     }
 }
 
+.about_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 60vh;
+
+
+    h3 {
+        font-size: 96px;
+        font-weight: 200;
+        align-self: flex-end;
+        letter-spacing: 2px;
+
+    }
+
+    h2 {
+        font-size: 96px;
+        font-weight: 500;
+        padding-bottom: 150px;
+        align-self: flex-end;
+        letter-spacing: 2px;
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        display: block;
+        height: 500px;
+        width: 500px;
+        background-image: url("images/letter-a.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+}
+
 .about_section {
     margin-left: 120px;
     padding: 64px 48px;
@@ -238,41 +274,7 @@ nav {
     justify-items: center;
 
     .description {
-        .about_wrapper {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            height: 60vh;
 
-
-            h3 {
-                font-size: 96px;
-                font-weight: 200;
-                align-self: flex-end;
-                letter-spacing: 2px;
-
-            }
-
-            h2 {
-                font-size: 96px;
-                font-weight: 500;
-                padding-bottom: 150px;
-                align-self: flex-end;
-                letter-spacing: 2px;
-            }
-
-            &:before {
-                content: '';
-                position: absolute;
-                z-index: -1;
-                display: block;
-                height: 500px;
-                width: 500px;
-                background-image: url("images/letter-a.png");
-                background-repeat: no-repeat;
-                background-size: contain;
-            }
-        }
 
         p {
             line-height: 24px;
@@ -308,7 +310,7 @@ nav {
 
 }
 
-.gallery_section{
+.gallery_section {
     margin-left: 120px;
     padding: 64px 48px;
     display: flex;
@@ -316,23 +318,124 @@ nav {
     justify-content: center;
     align-items: center;
 
-    h2{
+    h2 {
         color: #282832;
         font-size: 15vw;
         font-weight: 700;
         text-align: center;
         z-index: -1;
     }
-    .gallery{
+
+    .gallery {
         display: grid;
         grid-template-columns: min-content min-content;
         gap: 64px;
-        img{
+
+        figure {
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        img, figure {
             height: 600px;
             width: auto;
-            &:nth-of-type(2n){
-                margin-top: -64px;
+            transition: .4s ease-in-out;
+        }
+
+        figure:nth-of-type(2n) {
+            margin-top: -64px;
+        }
+
+        & figure:hover img {
+            transform: scale(1.2);
+        }
+    }
+}
+
+
+
+.testimonial_section {
+    margin-left: 120px;
+    padding: 64px 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 128px;
+
+    .about_wrapper {
+        h3, h2 {
+            padding-left: 20vw;
+            align-self: flex-start;
+        }
+
+        &:before {
+            background-image: url("images/letter-w.png");
+        }
+    }
+
+    .testimonials {
+        padding-top: 96px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 64px;
+
+        .testimonial {
+            padding: 64px 32px;
+            display: grid;
+            grid-template-rows: 1fr 0.5fr 2fr;
+            gap: 18px;
+            background-color: rgba(0, 0, 0, 0.4);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-blend-mode: darken;
+
+            span {
+                font-size: 96px;
+                font-weight: 500
+            }
+
+            h3 {
+                letter-spacing: 2px;
+                font-weight: 500;
+                font-size: 32px;
+            }
+
+            p {
+                font-weight: 200;
+                font-size: 20px;
+            }
+
+            &:nth-of-type(1) {
+                background-image: url("images/white-iterior-testimonial.webp");
+            }
+
+            &:nth-of-type(2) {
+                background-image: url("images/yellow-interier-testimonial.webp");
+
+            }
+
+            &:nth-of-type(3) {
+                background-image: url("images/dark-interior-testimonial.webp");
+
+            }
+        }
+
+    }
+
+    .clients {
+        display: flex;
+        justify-content: space-between;
+
+        img {
+            cursor: pointer;
+            opacity: 0.6;
+            filter: invert(0.815);
+            transition: all .3s ease-in-out;
+
+            &:hover {
+                opacity: 1;
+
             }
         }
     }
+
 }
