@@ -1,22 +1,9 @@
-# Lab 2 - Landing page
-
-Create a web page for your/friends/relatives business (example: car-rent, cookies-shop, crypto-scam)
+# Lab 2 - Interior Design Landing page
+A landing page for a interior design studio that tries to combine several styles in a single interior. It features some modern and classic elements in the decor.
 
 ## Customer requirements
+https://guzungrigore.github.io/tum-web-lab2/
 
-- Some form of navigation to sections (links, buttons)
-- Call to action
-- At least 4 sections ([see examples](https://webflow.com/blog/high-converting-landing-page))
-- Pleasant to the eyes
-
-## Dev requirements
-
-- Use vanilla CSS and HTML (no frameworks)
-- Have a decent git history (no one commit)
-- The page should be deployed on a free hosting service (example: GitHub Pages, Vercel, Netlify)
-- Project repo should have a README with a short description of the landing page topic, screenshots, and a link to the live demo
-
-## Other requirements:
-
-- For potential maximal mark, a WIP version should be submitted during the class
-- Use index.html, reset.css
+## Screenshot
+![screencapture-localhost-63342-tum-web-lab2-g-index-html-2024-02-29-19_05_55](https://github.com/guzungrigore/tum-web-lab2/assets/113361340/dc7fa6a9-73df-4716-9b29-8de847674735)
+![screencapture-localhost-63342-tum-web-lab2-g-index-html-2024-02-29-19_06_12](https://github.com/guzungrigore/tum-web-lab2/assets/113361340/9230dfeb-5675-4771-841c-6e1e6c3ab417)
