@@ -153,6 +153,96 @@ nav {
     }
 }
 
+.message {
+    visibility: hidden;
+    position: fixed;
+    margin-right: 35px;
+    opacity: 0;
+    z-index: 3;
+    bottom: 50px;
+    left: 250px;
+    background-color: white;
+    color: #1f1f25;
+    padding: 20px;
+    max-width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+    box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
+
+    a {
+        text-decoration: none;
+        color: #1f546f;
+        font-weight: 500;
+        transition: 0.2s ease;
+
+        &:hover {
+            color: #297095;
+        }
+    }
+
+    @media screen and (max-width: 500px) {
+        left: 200px;
+
+    }
+
+}
+
+.mascot {
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    left: 130px;
+    z-index: 4;
+    opacity: 0;
+    animation: mascot 3s ease-in-out, spin 2s ease infinite;
+    animation-delay: 5s, 10s;
+    animation-fill-mode: forwards;
+
+    &:hover {
+        animation-play-state: paused;
+    }
+
+    @media screen and (max-width: 500px) {
+        left: 75px;
+
+    }
+}
+
+.mascot_wrapper:hover .message {
+    opacity: 1;
+    visibility: visible;
+}
+
+@keyframes mascot {
+    0% {
+        opacity: 0;
+        transform: translateX(-200px);
+    }
+
+    50% {
+        opacity: 1;
+
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
 .primary_section {
     color: white;
     margin-left: 120px;
@@ -265,6 +355,10 @@ nav {
         }
     }
     @media screen and (max-width: 500px) {
+        background-image: url("images/interior_for_mobile.webp");
+        background-color: rgba(0, 0, 0, 0.4);
+        background-blend-mode: darken;
+
         .title_wrapper {
             padding: 32px;
 
@@ -502,6 +596,29 @@ nav {
     }
 }
 
+.discount_section {
+    display: none;
+}
+
+@media screen and (max-width: 500px) {
+    .discount_section {
+        padding: 18px 24px;
+        display: flex;
+        margin-left: 100px;
+        background-color: #1f546f;
+        font-style: italic;
+        color: #1f1f25;
+        font-size: 20px;
+        a{
+            text-decoration: none;
+            color: white;
+            &:hover{
+                color: #8b8b8b;
+            }
+        }
+    }
+}
+
 .testimonial_section {
     margin-left: 120px;
     padding: 64px 48px;
@@ -562,6 +679,7 @@ nav {
                 background-image: url("images/yellow-interier-testimonial.webp");
 
             }
+
             &:nth-of-type(3) {
                 background-image: url("images/dark-interior-testimonial.webp");
 
