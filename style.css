@@ -170,6 +170,7 @@ nav {
     gap: 16px;
     transition: opacity 0.2s ease, visibility 0.2s ease;
     box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
+    transition-delay: 1s;
 
     a {
         text-decoration: none;
