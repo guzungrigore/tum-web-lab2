@@ -99,15 +99,62 @@
     </div>
 </section>
 
-<section class="gallery_section" id="gallery_section">
-    <h2>GALLERY</h2>
-    <div class="gallery">
-        <figure><img src="images/grid-gallery-1.webp" alt="grid-gallery-1"/></figure>
-        <figure><img src="images/grid-gallery-2.webp" alt="grid-gallery-2"/></figure>
-        <figure><img src="images/grid-gallery-3.webp" alt="grid-gallery-3"/></figure>
-        <figure><img src="images/grid-gallery-4.webp" alt="grid-gallery-4"/></figure>
+<!--<section class="gallery_section" id="gallery_section">-->
+<!--    <h2>GALLERY</h2>-->
+<!--    <div class="gallery">-->
+<!--        <figure><img src="images/grid-gallery-1.webp" alt="grid-gallery-1"/></figure>-->
+<!--        <figure><img src="images/grid-gallery-2.webp" alt="grid-gallery-2"/></figure>-->
+<!--        <figure><img src="images/grid-gallery-3.webp" alt="grid-gallery-3"/></figure>-->
+<!--        <figure><img src="images/grid-gallery-4.webp" alt="grid-gallery-4"/></figure>-->
+<!--    </div>-->
+<!--</section>-->
+
+<section class="gallery-section py-5 text-center" id="gallery_section">
+    <h2 class="text-secondary fw-bold display-1" style="z-index: -1;">GALLERY</h2>
+    <div class="container">
+        <div class="row g-4 justify-content-center">
+            <div class="col-6 col-md-4 col-lg-3">
+                <figure class="figure">
+                    <img src="images/grid-gallery-1.webp" class="figure-img img-fluid rounded" alt="grid-gallery-1" style="transition: .4s ease-in-out;">
+                </figure>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <figure class="figure">
+                    <img src="images/grid-gallery-2.webp" class="figure-img img-fluid rounded" alt="grid-gallery-2" style="transition: .4s ease-in-out;">
+                </figure>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <figure class="figure">
+                    <img src="images/grid-gallery-3.webp" class="figure-img img-fluid rounded" alt="grid-gallery-3" style="transition: .4s ease-in-out;">
+                </figure>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <figure class="figure">
+                    <img src="images/grid-gallery-4.webp" class="figure-img img-fluid rounded" alt="grid-gallery-4" style="transition: .4s ease-in-out;">
+                </figure>
+            </div>
+        </div>
     </div>
 </section>
+
+
+<style>
+    .figure:hover .figure-img {
+        transform: scale(1.2);
+    }
+
+    @media (min-width: 992px) {
+        .gallery-section .row > div:nth-of-type(2n) .figure {
+            margin-top: -64px;
+        }
+    }
+
+    @media (max-width: 991px) {
+        .gallery-section .row > div .figure {
+            margin-top: 0 !important;
+        }
+    }
+</style>
 
 <section class="discount_section">
     <h3>Get <a href="#contact_section">15% discount</a> on your future interior right now!</h3>
